@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
 /* ============================================
    Airline Management System — Global Styles
    Premium sky-themed design system
    ============================================ */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Outfit:wght@300;400;500;600;700;800;900&display=swap');
-@import "tailwindcss";
 
 /* ─── Custom Theme ─── */
 @theme {
@@ -21,16 +21,10 @@
   --color-sky-950: #082f49;
 
   --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
-  --font-display: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+  --font-heading: 'Outfit', ui-sans-serif, system-ui, sans-serif;
 }
 
 /* ─── Base Styles ─── */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 html {
   scroll-behavior: smooth;
 }
@@ -41,6 +35,7 @@ body {
   min-height: 100vh;
   color: #0c4a6e;
   overflow-x: hidden;
+  line-height: 1.6;
 }
 
 /* ─── Custom Scrollbar ─── */
@@ -56,6 +51,11 @@ body {
 }
 ::-webkit-scrollbar-thumb:hover {
   background: linear-gradient(180deg, #0ea5e9, #0369a1);
+}
+
+/* ─── Font Heading Utility ─── */
+.heading-font {
+  font-family: var(--font-heading);
 }
 
 /* ─── Glassmorphism Utilities ─── */
@@ -104,6 +104,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  text-decoration: none;
 }
 .btn-gradient:hover {
   background: linear-gradient(135deg, #0ea5e9, #0369a1);
@@ -129,6 +130,10 @@ body {
   font-size: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
 }
 .btn-outline:hover {
   background: #0284c7;
@@ -146,6 +151,9 @@ body {
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 15px rgba(220, 38, 38, 0.3);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 .btn-danger:hover {
   background: linear-gradient(135deg, #ef4444, #b91c1c);
@@ -179,15 +187,9 @@ body {
     transform: translate(-100px, 50px) rotate(-5deg);
     opacity: 0;
   }
-  10% {
-    opacity: 1;
-  }
-  50% {
-    transform: translate(50vw, -30px) rotate(-3deg);
-  }
-  90% {
-    opacity: 1;
-  }
+  10% { opacity: 1; }
+  50% { transform: translate(50vw, -30px) rotate(-3deg); }
+  90% { opacity: 1; }
   100% {
     transform: translate(calc(100vw + 100px), -80px) rotate(-5deg);
     opacity: 0;
@@ -199,20 +201,16 @@ body {
 }
 
 /* ─── Loading Skeleton ─── */
-@keyframes skeleton-pulse {
-  0%, 100% { opacity: 0.4; }
-  50% { opacity: 0.8; }
-}
-
 .skeleton {
   background: linear-gradient(90deg, 
-    rgba(255,255,255,0.3) 25%, 
-    rgba(255,255,255,0.5) 50%, 
-    rgba(255,255,255,0.3) 75%
+    rgba(14, 165, 233, 0.08) 25%, 
+    rgba(14, 165, 233, 0.15) 50%, 
+    rgba(14, 165, 233, 0.08) 75%
   );
   background-size: 200% 100%;
   animation: skeleton-shimmer 1.5s ease-in-out infinite;
   border-radius: 8px;
+  min-height: 16px;
 }
 
 @keyframes skeleton-shimmer {
@@ -242,6 +240,7 @@ body {
   color: #0c4a6e;
   transition: all 0.3s ease;
   outline: none;
+  line-height: 1.5;
 }
 .input-premium:focus {
   border-color: #0ea5e9;
@@ -269,6 +268,7 @@ body {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' fill='%230ea5e9' viewBox='0 0 16 16'%3E%3Cpath d='M8 11L3 6h10l-5 5z'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: right 16px center;
+  line-height: 1.5;
 }
 .select-premium:focus {
   border-color: #0ea5e9;
@@ -285,6 +285,8 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  display: inline-block;
+  line-height: 1.4;
 }
 
 .badge-cancelled {
@@ -296,6 +298,8 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+  display: inline-block;
+  line-height: 1.4;
 }
 
 /* ─── Page Background Variations ─── */
@@ -314,7 +318,7 @@ body {
 }
 
 /* ─── Text Gradient ─── */
-.text-gradient {
+.sky-text-gradient {
   background: linear-gradient(135deg, #0369a1, #0ea5e9, #38bdf8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

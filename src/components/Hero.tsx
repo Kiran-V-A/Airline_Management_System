@@ -48,10 +48,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold leading-tight"
+          className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl heading-font font-bold leading-tight"
         >
           <span className="text-sky-900">Fly </span>
-          <span className="text-gradient">Beyond</span>
+          <span className="sky-text-gradient">Beyond</span>
           <br />
           <span className="text-sky-900">Limits</span>
         </motion.h1>
@@ -131,7 +131,7 @@ export default function Hero() {
               <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-sky-400 to-blue-600 flex items-center justify-center mx-auto mb-4">
                 <feature.icon className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-lg font-bold text-sky-900 font-display">
+              <h3 className="text-lg font-bold text-sky-900 heading-font">
                 {feature.title}
               </h3>
               <p className="text-sm text-sky-600/70 mt-2">{feature.description}</p>

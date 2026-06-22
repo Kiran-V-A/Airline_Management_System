@@ -38,7 +38,7 @@ export default function AdminFlightsPage() {
       <PageTransition className="min-h-screen pt-28 px-4">
         <div className="max-w-md mx-auto text-center glass-card rounded-3xl p-12">
           <ShieldAlert className="w-16 h-16 text-amber-400 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-sky-900 font-display">Access Denied</h2>
+          <h2 className="text-2xl font-bold text-sky-900 heading-font">Access Denied</h2>
           <p className="text-sky-600/70 mt-2">You need admin privileges to access this page.</p>
           <button onClick={() => router.push('/')} className="btn-gradient mt-6">Go Home</button>
         </div>
@@ -95,7 +95,7 @@ export default function AdminFlightsPage() {
               </motion.div>
             </Link>
             <div>
-              <h1 className="text-3xl sm:text-4xl font-bold font-display text-gradient">
+              <h1 className="text-3xl sm:text-4xl font-bold heading-font sky-text-gradient">
                 Flight Management
               </h1>
               <p className="text-sky-600/70 mt-1">Add, edit, and manage all flights</p>
@@ -270,7 +270,7 @@ export default function AdminFlightsPage() {
             className="glass-card rounded-3xl p-12 text-center max-w-md mx-auto"
           >
             <Plane className="w-16 h-16 text-sky-300 mx-auto mb-4" />
-            <h3 className="text-xl font-bold text-sky-900 font-display">No Flights Yet</h3>
+            <h3 className="text-xl font-bold text-sky-900 heading-font">No Flights Yet</h3>
             <p className="text-sky-600/70 mt-2 text-sm">Add your first flight to get started.</p>
             <button onClick={() => setShowForm(true)} className="btn-gradient mt-6">
               <Plus className="w-4 h-4 inline mr-2" />

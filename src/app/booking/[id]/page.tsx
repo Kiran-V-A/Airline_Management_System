@@ -79,8 +79,8 @@ export default function BookingPage() {
     try {
       await createBooking(flightId, seats);
       setSuccess(true);
-    } catch (err: unknown) {
-      const message = err instanceof Error ? err.message : 'Booking failed. Please try again.';
+    } catch (err: any) {
+      const message = err?.message || (typeof err === 'string' ? err : 'Booking failed. Please try again.');
       setError(message);
     } finally {
       setBookingLoading(false);
@@ -100,7 +100,7 @@ export default function BookingPage() {
       <PageTransition className="min-h-screen pt-28 px-4">
         <div className="max-w-lg mx-auto text-center glass-card rounded-3xl p-12">
           <AlertTriangle className="w-16 h-16 text-amber-400 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-sky-900 font-display">Flight Not Found</h2>
+          <h2 className="text-2xl font-bold text-sky-900 heading-font">Flight Not Found</h2>
           <p className="text-sky-600/70 mt-2">This flight may no longer be available.</p>
           <button onClick={() => router.push('/flights')} className="btn-gradient mt-6">
             Back to Flights
@@ -141,7 +141,7 @@ export default function BookingPage() {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="text-3xl font-bold font-display text-sky-900 mt-6"
+                className="text-3xl font-bold heading-font text-sky-900 mt-6"
               >
                 Booking Confirmed!
               </motion.h2>
@@ -204,7 +204,7 @@ export default function BookingPage() {
             <motion.div key="form" className="space-y-6">
               {/* Page Header */}
               <div className="text-center mb-4">
-                <h1 className="text-3xl sm:text-4xl font-bold font-display text-gradient">
+                <h1 className="text-3xl sm:text-4xl font-bold heading-font sky-text-gradient">
                   Complete Your Booking
                 </h1>
                 <p className="text-sky-600/70 mt-2">
@@ -238,7 +238,7 @@ export default function BookingPage() {
                 <div className="px-6 py-6">
                   <div className="flex items-center justify-between gap-6">
                     <div className="text-center">
-                      <p className="text-3xl font-bold text-sky-900 font-display">
+                      <p className="text-3xl font-bold text-sky-900 heading-font">
                         {format(departureTime, 'HH:mm')}
                       </p>
                       <p className="text-base font-medium text-sky-700 mt-1">{flight.source}</p>
@@ -254,7 +254,7 @@ export default function BookingPage() {
                       </div>
                     </div>
                     <div className="text-center">
-                      <p className="text-3xl font-bold text-sky-900 font-display">
+                      <p className="text-3xl font-bold text-sky-900 heading-font">
                         {format(arrivalTime, 'HH:mm')}
                       </p>
                       <p className="text-base font-medium text-sky-700 mt-1">{flight.destination}</p>
@@ -271,7 +271,7 @@ export default function BookingPage() {
                 transition={{ delay: 0.15 }}
                 className="glass-card rounded-2xl p-6"
               >
-                <h3 className="text-lg font-bold text-sky-900 font-display mb-4 flex items-center gap-2">
+                <h3 className="text-lg font-bold text-sky-900 heading-font mb-4 flex items-center gap-2">
                   <Users className="w-5 h-5 text-sky-600" />
                   Select Seats
                 </h3>
@@ -294,7 +294,7 @@ export default function BookingPage() {
                     >
                       <Minus className="w-4 h-4" />
                     </motion.button>
-                    <span className="text-2xl font-bold text-sky-900 font-display w-8 text-center">
+                    <span className="text-2xl font-bold text-sky-900 heading-font w-8 text-center">
                       {seats}
                     </span>
                     <motion.button
@@ -317,7 +317,7 @@ export default function BookingPage() {
                 transition={{ delay: 0.3 }}
                 className="glass-card rounded-2xl p-6"
               >
-                <h3 className="text-lg font-bold text-sky-900 font-display mb-4 flex items-center gap-2">
+                <h3 className="text-lg font-bold text-sky-900 heading-font mb-4 flex items-center gap-2">
                   <IndianRupee className="w-5 h-5 text-sky-600" />
                   Price Summary
                 </h3>
@@ -332,7 +332,7 @@ export default function BookingPage() {
                   </div>
                   <div className="border-t border-sky-200/50 pt-3 flex justify-between">
                     <span className="font-semibold text-sky-800">Total</span>
-                    <span className="text-2xl font-bold text-sky-900 font-display">
+                    <span className="text-2xl font-bold text-sky-900 heading-font">
                       ₹{totalPrice.toLocaleString('en-IN')}
                     </span>
                   </div>

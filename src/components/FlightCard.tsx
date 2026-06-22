@@ -52,7 +52,7 @@ export default function FlightCard({ flight, index }: FlightCardProps) {
         <div className="flex items-center justify-between gap-4">
           {/* Source */}
           <div className="text-center flex-shrink-0">
-            <p className="text-2xl font-bold text-sky-900 font-display">
+            <p className="text-2xl font-bold text-sky-900 heading-font">
               {format(departureTime, 'HH:mm')}
             </p>
             <p className="text-sm font-medium text-sky-700 mt-1">{flight.source}</p>
@@ -80,7 +80,7 @@ export default function FlightCard({ flight, index }: FlightCardProps) {
 
           {/* Destination */}
           <div className="text-center flex-shrink-0">
-            <p className="text-2xl font-bold text-sky-900 font-display">
+            <p className="text-2xl font-bold text-sky-900 heading-font">
               {format(arrivalTime, 'HH:mm')}
             </p>
             <p className="text-sm font-medium text-sky-700 mt-1">{flight.destination}</p>
@@ -94,7 +94,7 @@ export default function FlightCard({ flight, index }: FlightCardProps) {
         <div>
           <div className="flex items-center gap-0.5">
             <IndianRupee className="w-5 h-5 text-sky-800" />
-            <span className="text-2xl font-bold text-sky-800 font-display">
+            <span className="text-2xl font-bold text-sky-800 heading-font">
               {flight.price.toLocaleString('en-IN')}
             </span>
           </div>

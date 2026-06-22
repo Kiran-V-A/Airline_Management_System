@@ -85,7 +85,7 @@ export default function AdminDashboard() {
       <PageTransition className="min-h-screen pt-28 px-4">
         <div className="max-w-md mx-auto text-center glass-card rounded-3xl p-12">
           <ShieldAlert className="w-16 h-16 text-amber-400 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-sky-900 font-display">Access Denied</h2>
+          <h2 className="text-2xl font-bold text-sky-900 heading-font">Access Denied</h2>
           <p className="text-sky-600/70 mt-2">You need admin privileges to access this page.</p>
           <button onClick={() => router.push('/')} className="btn-gradient mt-6">Go Home</button>
         </div>
@@ -137,7 +137,7 @@ export default function AdminDashboard() {
         {/* Header */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between mb-8 gap-4">
           <div>
-            <h1 className="text-3xl sm:text-4xl font-bold font-display text-gradient">
+            <h1 className="text-3xl sm:text-4xl font-bold heading-font sky-text-gradient">
               Admin Dashboard
             </h1>
             <p className="text-sky-600/70 mt-1">Overview of your airline operations</p>
@@ -179,7 +179,7 @@ export default function AdminDashboard() {
               transition={{ delay: 0.3 }}
               className="glass-card rounded-2xl p-6"
             >
-              <h3 className="text-lg font-bold text-sky-900 font-display mb-4 flex items-center gap-2">
+              <h3 className="text-lg font-bold text-sky-900 heading-font mb-4 flex items-center gap-2">
                 <BarChart3 className="w-5 h-5 text-sky-600" />
                 Revenue Trend
               </h3>
@@ -226,7 +226,7 @@ export default function AdminDashboard() {
               transition={{ delay: 0.4 }}
               className="glass-card rounded-2xl p-6"
             >
-              <h3 className="text-lg font-bold text-sky-900 font-display mb-4">
+              <h3 className="text-lg font-bold text-sky-900 heading-font mb-4">
                 Bookings by Airline
               </h3>
               {barData.length > 0 ? (
@@ -257,7 +257,7 @@ export default function AdminDashboard() {
               transition={{ delay: 0.5 }}
               className="glass-card rounded-2xl p-6 lg:col-span-2"
             >
-              <h3 className="text-lg font-bold text-sky-900 font-display mb-4">
+              <h3 className="text-lg font-bold text-sky-900 heading-font mb-4">
                 Seat Utilization by Flight
               </h3>
               {seatData.length > 0 ? (
@@ -304,7 +304,7 @@ export default function AdminDashboard() {
             className="glass-card rounded-2xl overflow-hidden"
           >
             <div className="px-6 py-4 border-b border-white/30">
-              <h3 className="text-lg font-bold text-sky-900 font-display">Recent Bookings</h3>
+              <h3 className="text-lg font-bold text-sky-900 heading-font">Recent Bookings</h3>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">

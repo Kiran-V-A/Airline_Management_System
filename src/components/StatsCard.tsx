@@ -49,7 +49,7 @@ export default function StatsCard({ title, value, icon: Icon, prefix, suffix, co
       <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${color} flex items-center justify-center mb-4`}>
         <Icon className="w-6 h-6 text-white" />
       </div>
-      <p className="text-3xl font-bold font-display text-sky-900 count-animate">
+      <p className="text-3xl font-bold heading-font text-sky-900 count-animate">
         <AnimatedNumber value={value} prefix={prefix} suffix={suffix} />
       </p>
       <p className="text-sm text-sky-600/70 mt-1">{title}</p>

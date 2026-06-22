@@ -43,7 +43,7 @@ export default function Navbar() {
               >
                 <Plane className="w-7 h-7 sm:w-8 sm:h-8 text-sky-600" />
               </motion.div>
-              <span className="font-display text-xl sm:text-2xl font-bold text-gradient">
+              <span className="heading-font text-xl sm:text-2xl font-bold sky-text-gradient">
                 {APP_NAME}
               </span>
             </Link>

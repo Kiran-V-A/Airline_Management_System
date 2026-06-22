@@ -41,7 +41,7 @@ export default function AuthForm({ mode, onSubmit, error }: AuthFormProps) {
         {/* Header */}
         <div className="text-center mb-8">
           <motion.h1
-            className="text-3xl font-bold font-display text-gradient"
+            className="text-3xl font-bold heading-font sky-text-gradient"
             initial={{ y: -10, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.2 }}

@@ -1,4 +1,4 @@
-# ✈️ SkyVoyage — Airline Management System
+# SkyVoyage — Airline Management System
 
 A **premium, full-stack Airline Management System** with a stunning animated UI inspired by modern airline websites like IndiGo, Emirates, and Air India.
 
@@ -6,28 +6,28 @@ Built with **Next.js 15**, **Tailwind CSS**, **Framer Motion**, **Supabase**, an
 
 ---
 
-## ✨ Features
+## Features
 
-### 🌤️ Premium UI
+### Premium UI
 - Blue sky gradient background with animated parallax clouds
 - Airplane flying animation across the hero section
 - Glassmorphism navbar and cards
 - Smooth Framer Motion page transitions and micro-interactions
 - Loading skeletons and responsive mobile design
 
-### ✈️ Core Functionality
+### Core Functionality
 - **Flight Search** — Filter by source, destination, and date
 - **Booking System** — Book seats with real-time availability validation
 - **My Bookings** — View and cancel your reservations
 - **Admin Dashboard** — Stats, charts (Recharts), and revenue analytics
 - **Flight Management** — Admin CRUD for flights
 
-### 🔐 Authentication
+### Authentication
 - Supabase Auth (email + password)
 - Role-based access: **User** and **Admin**
 - Protected routes with middleware
 
-### ⚡ Advanced
+### Advanced
 - Real-time seat updates via Supabase Realtime
 - Booking status tracking (confirmed/cancelled)
 - Input validation and error handling
@@ -35,7 +35,7 @@ Built with **Next.js 15**, **Tailwind CSS**, **Framer Motion**, **Supabase**, an
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 | Layer       | Technology                            |
 |-------------|---------------------------------------|
@@ -48,7 +48,7 @@ Built with **Next.js 15**, **Tailwind CSS**, **Framer Motion**, **Supabase**, an
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 - Node.js 18+
@@ -102,7 +102,7 @@ Open [http://localhost:3000](http://localhost:3000) to see the app.
 
 ---
 
-## 👤 Admin Setup
+## Admin Setup
 
 Admin roles are assigned manually for security:
 
@@ -113,7 +113,7 @@ Admin roles are assigned manually for security:
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 src/
@@ -158,7 +158,7 @@ src/
 
 ---
 
-## 🗃️ Database Schema
+## Database Schema
 
 ### flights
 | Column           | Type        | Description             |
@@ -193,7 +193,7 @@ src/
 
 ---
 
-## 🚢 Deployment
+## Deployment
 
 This app is **Vercel-ready**:
 
@@ -204,6 +204,6 @@ This app is **Vercel-ready**:
 
 ---
 
-## 📄 License
+## License
 
 MIT License — feel free to use and modify.

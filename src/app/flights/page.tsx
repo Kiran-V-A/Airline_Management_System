@@ -33,7 +33,7 @@ export default function FlightsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
-          <h1 className="text-3xl sm:text-4xl font-bold font-display text-gradient">
+          <h1 className="text-3xl sm:text-4xl font-bold heading-font sky-text-gradient">
             Find Your Perfect Flight
           </h1>
           <p className="text-sky-600/70 mt-2">
@@ -87,7 +87,7 @@ export default function FlightsPage() {
             <div className="w-20 h-20 rounded-full bg-sky-100 flex items-center justify-center mx-auto mb-6">
               <SearchX className="w-10 h-10 text-sky-400" />
             </div>
-            <h3 className="text-xl font-bold text-sky-900 font-display">No Flights Found</h3>
+            <h3 className="text-xl font-bold text-sky-900 heading-font">No Flights Found</h3>
             <p className="text-sky-600/70 mt-2 text-sm">
               Try adjusting your search filters or check a different date.
             </p>

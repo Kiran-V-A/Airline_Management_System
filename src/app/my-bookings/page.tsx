@@ -51,7 +51,7 @@ export default function MyBookingsPage() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-10"
         >
-          <h1 className="text-3xl sm:text-4xl font-bold font-display text-gradient">
+          <h1 className="text-3xl sm:text-4xl font-bold heading-font sky-text-gradient">
             My Bookings
           </h1>
           <p className="text-sky-600/70 mt-2">
@@ -71,7 +71,7 @@ export default function MyBookingsPage() {
         {/* Confirmed Bookings */}
         {!loading && confirmedBookings.length > 0 && (
           <div className="mb-10">
-            <h2 className="text-lg font-bold text-sky-800 font-display mb-4 flex items-center gap-2">
+            <h2 className="text-lg font-bold text-sky-800 heading-font mb-4 flex items-center gap-2">
               <Ticket className="w-5 h-5 text-sky-600" />
               Active Bookings ({confirmedBookings.length})
             </h2>
@@ -92,7 +92,7 @@ export default function MyBookingsPage() {
         {/* Cancelled Bookings */}
         {!loading && cancelledBookings.length > 0 && (
           <div>
-            <h2 className="text-lg font-bold text-sky-800/60 font-display mb-4">
+            <h2 className="text-lg font-bold text-sky-800/60 heading-font mb-4">
               Cancelled ({cancelledBookings.length})
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -113,7 +113,7 @@ export default function MyBookingsPage() {
             <div className="w-20 h-20 rounded-full bg-sky-100 flex items-center justify-center mx-auto mb-6">
               <Ticket className="w-10 h-10 text-sky-400" />
             </div>
-            <h3 className="text-xl font-bold text-sky-900 font-display">No Bookings Yet</h3>
+            <h3 className="text-xl font-bold text-sky-900 heading-font">No Bookings Yet</h3>
             <p className="text-sky-600/70 mt-2 text-sm">
               Start your journey by searching for flights.
             </p>
